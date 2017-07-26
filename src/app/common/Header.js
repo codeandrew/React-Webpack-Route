@@ -1,10 +1,13 @@
 import React from 'react';
 import {  Link  } from 'react-router-dom';
+import { Container, Row, Col,
+Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink
+ } from 'reactstrap';
 
 export class Header extends React.Component {
   render(){
     return (
-      <nav className="navbar navbar-default">
+      /*<nav className="navbar navbar-default">
         <div className="container">
           <div className="navbar-header">
             <div className="navbrand">
@@ -18,6 +21,20 @@ export class Header extends React.Component {
           </div>
         </div>
       </nav>
+      */
+      <Navbar full light>
+        <Container>
+          <NavbarBrand href="/">Brand</NavbarBrand>
+          <Nav className="pull-xs-right" navbar>
+            <NavItem>
+              <NavLink tag={Link} to="/">Home</NavLink>
+              <NavLink tag={Link} to="/about">About</NavLink>
+              <NavLink tag={Link} to="/topics">Topics</NavLink>
+            </NavItem>
+          </Nav>
+        </Container>
+      </Navbar>
+
     );
   }
 }

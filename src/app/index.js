@@ -12,9 +12,12 @@ const newHistory = createBrowserHistory();
 import { Header } from './common/Header';
 import { Home } from './common/Home';
 import { About } from './common/About';
+import { Topics } from './common/Topics';
+import { Footer } from './common/Footer';
 
 require('./../scss/main.scss');
-
+import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.css';
+//require('bootstrap/dist/css/bootstrap.css');
 
 class App extends React.Component {
   render(){
@@ -25,7 +28,9 @@ class App extends React.Component {
           <switch>
             <Route exact path="/" component={ Home } />
             <Route path="/about" component={ About } />
+            <Route path="/topics" component={ Topics } />
           </switch>
+          <Footer />
         </div>
       </Router>
     );

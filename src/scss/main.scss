@@ -4,7 +4,18 @@ $maroon : #7777bb;
   padding: 40px;
   text-align: center;
   background-color: $maroon;
+  color : white;
    h1 {
      text-transform: uppercase;
    }
+}
+
+
+.about {
+  background-color: #333;
+  color : white;
+}
+
+.section {
+  padding : 60px 0;
 }
